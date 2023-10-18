@@ -1,0 +1,17 @@
+{{ if .Travel }}
+<div class="sideSection">
+    <div class="sideSection__heading">
+        <h2 class="sideSection__title">Travel</h2>
+    </div>
+    <div class="sideSection__content">
+        {{ range .Travel.Details }}
+        <li class="travel__list">
+            <ul class="travel__item">
+                {{ . }}
+            </ul>
+        </li>
+        {{ end }}
+    </div>
+</div>
+{{ end }}
+

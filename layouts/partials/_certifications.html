@@ -1,0 +1,16 @@
+{{ if .Certifications }}
+<div class="sideSection">
+    <div class="sideSection__heading">
+        <h2 class="sideSection__title">Certifications</h2>
+    </div>
+    <div class="sideSection certifications">
+        <ul>
+            {{ range .Certifications }}
+            <li class="certifications__item">
+                <img src="{{ .Badge }}"> <span>{{ .Name | safeHTML }}</span>
+            </li>
+            {{ end }}
+        </ul>
+    </div>
+</div>
+{{ end }}
